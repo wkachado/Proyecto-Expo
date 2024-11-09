@@ -1,0 +1,106 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.banner {
+    text-align: center;
+    background-color: #ff5733;
+    padding: 20px;
+}
+.testimonio {
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    background-color: #0086c4;
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+.oferta {
+    text-align: center;
+    font-weight: bold;
+    background-color: #1d0238;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.como-funciona h2 {
+    font-weight: bold;
+    color: #ffff;
+
+}
+
+.paso {
+    padding: 20px;
+    border-radius:10px;
+    transition: transform 0.3s ease;
+}
+
+.paso h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+
+}
+
+.paso p {
+    font-size: 1.1em;
+}
+
+.paso:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    border: none;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+footer{
+    background-color: #3333;
+    color: white;
+    padding: 20px 0;
+}
+
+footer h5 {
+    font-size: 16px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}

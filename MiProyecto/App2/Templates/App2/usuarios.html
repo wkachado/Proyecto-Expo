@@ -1,0 +1,49 @@
+{% extends 'App2/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    usuarios
+{% endblock title %}
+
+{% block codigoDinamico %}
+
+<div class="container">
+    <h1> Usuarios: </h1>  <br> <br>
+{% for usuario in usuario %}
+    <div class="container">
+        <table class="table table-hover text-center">
+            <tbody>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre de Usuario</th>
+                <th scope="col">Email</th>
+                <tr class="table-info text-center">
+                    <td>{{ usuario.id }}</td>
+                    <td>{{ usuario.nombre_usuario }}</td>
+                    <td>{{ usuario.email_usuario }}</td>
+
+            
+                
+        </tbody>
+    </table>    
+    <div class="container">
+        <button type="button" class="btn btn-outline-success">
+            <a  href="{% url 'crear_usuarios' %}">Nuevo Usuarios</a>
+            </button>
+            &nbsp; &nbsp; &nbsp;
+            <button type="button" class="btn btn-outline-light">
+                <a  href="{% url 'Buscar usuarios' %}"> Buscar Usuarios</a>
+            </button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-danger">
+                <a href="{% url 'Eliminar usuarios' usuario_id=usuario.id %}">Eliminar usuario</a>
+            </button> &nbsp;&nbsp;
+            <button type="button" class="btn btn-outline-info">
+                <a href="{% url 'Actualizar usuarios' usuario_id=usuario.id %}">Actualizar usuario</a>
+            </button>
+    </div>
+    
+</div>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,262 @@
+{% extends 'App2/base.html'  %}
+
+{% load static %}
+
+{% block title %}
+    Home Page
+{% endblock title %}
+
+{% block codigoDinamico %}
+<div class="container">
+    <div class="banner">
+        <h1>  BIENVENIDOS !!!! </h1>
+        <img src="{% static 'App2/logo2.jpg' %}" alt="Imagen" class="logo">
+        <p>This is a static page created using Django.</p>
+    </div>
+    <br> <br>
+    <div id="testimoniosCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="testimonio">
+                        <p>"Compre aqui y el servicio fue excelente. Las autopartes son de alta calidad."</p>
+                        <p><strong>- Juan Perez</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="testimonio">
+                        <p>"Las mejores ofertas y atencion rapida, lo recomiendo."</p>
+                        <p><strong>- Maria Gomez</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="testimonio">
+                        <p>"Todo fue facil de encontrar y los precios son justos. Volvere a comprar."</p>
+                        <p><strong>- Carlos Fernandez</strong></p>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <div class="testimonio">
+                        <p>"Recibi mi pedido a tiempo y la calidad de los productos es excelente."</p>
+                        <p><strong>- Luisa Martinez</strong></p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#testimoniosCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#testimoniosCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    <br> <br>
+
+    <div class="cta mt-5 text-center">
+        <h2>¡No pierdas nuestras ofertas exclusivas!</h2>
+    </div>
+    <div id="ofertasCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="oferta">
+                        <p>¡20% de Descuento en frenos esta semana.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="oferta">
+                        <p>Envio gratuito en pedidos superiores a $100.000.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="oferta">
+                        <p>¡15% de descuento en motores seleccionados!.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#ofertasCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#ofertasCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+    <div class="marcas mt-5">
+        <h2>Nuestras Marcas</h2>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="{% static 'App2/audi.jpg' %}" alt="Audi" class="img-fluid">
+            </div> &nbsp; &nbsp;&nbsp;
+            <div class="col-md-2">
+                <img src="{% static 'App2/fiat.jpg' %}" alt="Fiat" class="img-fluid">
+            </div> &nbsp; &nbsp;&nbsp;
+            <div class="col-md-2">
+                <img src="{% static 'App2/ford.jpg' %}" alt="Ford" class="img-fluid">
+            </div> &nbsp; &nbsp;&nbsp;
+            <div class="col-md-2">
+                <img src="{% static 'App2/toyota.jpg' %}" alt="Toyota" class="img-fluid">
+            </div> &nbsp; &nbsp;&nbsp;
+            <div class="col-md-2">
+                <img src="{% static 'App2/lambo.jpg' %}" alt="Lambo" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="como-funciona mt-5">
+        <h2 class="text-center mb-4">¿Como funciona?</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body paso bg-primary text-white rounded">
+                        <h3 class="card-title">1. Busca tu producto</h3>
+                        <p class="card-text">Utiliza nuestro buscador o navega por las categorias para encontrar la autoparte que necesitas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body paso bg-success text-white rounded">
+                        <h3 class="card-title">2. Realiza tu compra</h3>
+                        <p class="card-text">Añade tus productos al carrito y realiza el pago de manera segura en nuestra plataforma.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-lg">
+                    <div class="card-body paso bg-danger text-white rounded">
+                        <h3 class="card-title">3. Realiza tu pedido</h3>
+                        <p class="card-text">Envio rapido y seguro hasta la puerta de tu casa o taller mecanico.</p>
+                    </div>
+                </di>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="faq mt-5">
+        <h2>Preguntas Frecuentas</h2>
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <div class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ¿Cómo puedo devolver un producto en "los n"?
+                        </button>
+                    </h5>
+                </div>
+                
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        Para devolver un producto en "los n", debes presentar la factura de compra, el recibo de pago y el producto. También debes especificar el motivo de la devolución.
+                    </div>
+                </div>
+            </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <div class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        ¿Cuales son los metodos de pagos aceptados?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Aceptamos tarjetas de credito,debito,Paypal y pagos a traves de tranferencias bancarias.
+                </div>
+            </div>
+        </div>
+    </div>
+    <br> <br>
+    <div class="contacto mt-5">
+        <h2>Encuentranos</h2>
+    
+            <div class="row">
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.5046767202845!2d-58.623262792825685!3d-34.65423049439459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc77b5bc709f3%3A0x6d0b25505378c20b!2sCentro%20de%20formaci%C3%B3n%20laboral%20406!5e0!3m2!1ses-419!2sar!4v1726509119577!5m2!1ses-419!2sar" 
+                    width="600" height="450" 
+                    style="border:0;" allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+    
+                </div>
+            <div/>
+    </div>
+
+
+    <br> <br> <br>
+
+
+        <div class="contacto mt-5">
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h3>Contactanos</h3>
+                    
+                    <form action="{% url 'contacto' %}" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+</div>
+
+<br> <br> <br>
+
+<footer class="mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h5>AutoPartes</h5>
+            <p>Encuentra las mejores autopartes para tu vehiculo.</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Enlaces Rapidos</h5>
+            <ul>
+                <li><a href="{% url 'privacy_policy' %}">Politica de privacidad</a></li>
+                <li><a href="{% url 'terms_conditions' %}">Terminos y condiciones</a></li>
+                <p>&copy; <span id="currentYear"></span> AutoPartes. todos los derechos reservados.</p>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h5>Redes Sociales</5h>
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+$('.carousel').carousel({
+     interval: 3000 // Ajusta la velocidad (en milisegundos)
+});
+</script>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+{% endblock  %}

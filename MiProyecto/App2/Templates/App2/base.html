@@ -1,0 +1,69 @@
+{% load static %}     <! -- 32-para cargar los estilos CSS -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href= "https://bootswatch.com/5/darkly/bootstrap.min.css " rel="stylesheet" />  <! -- 31-de boostrap se trae el estilo de la pagina --> 
+    <link href="{% static 'App2/styles.css' %}" rel="stylesheet" />
+    <link rel="icon" href="{% static 'App2/favicon.jpg' %}">
+    <title>
+        {% block title %}           <! -- 32-para tener herencia de template y no escribir tanto HTML -->
+
+        {% endblock title %}        <! -- 32-para tener herencia de template y no escribir tanto HTML -->
+
+    </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'Home' %}">Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'Registro' %}">Registrarse</a>  <!--Boton en Navbar-->
+              </li>
+            {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'Productos' %}">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'Usuarios' %}">Usuarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'Ventas_detalles' %}">Ventas_detalles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+              </li>
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+            {% endif %} 
+            </ul>
+          </div>
+      </div>
+    </nav>
+        <div class="container">
+        {% if request.user.is_authenticated %}
+        <h2> ¡Hola, {{ user.username}}!</h2>        <! -- Esto sale cuando te logueas -->
+                <a href="{% url 'logout' %}">Cerrar sesión</a>
+          {% else %}
+              <h2>No has iniciado sesión. <a href="{% url 'login' %}">Inicia sesión aqui</a></h2>
+          {% endif %}
+      </div><br> <br> <br>
+    {% block codigoDinamico %}      <! -- 32-pEsto sirve para personalizar cada body -->
+
+    {% endblock %}
+
+
+    
+</body>
+</html>
